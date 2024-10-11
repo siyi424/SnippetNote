@@ -13,13 +13,22 @@
     "onCommand:snippetNote.addNote"
   ],
   "main": "dist/extension.js",
-  "contributes": {
+ "contributes": {
     "commands": [
       {
         "command": "snippetnote.addNote",
-        "title": "Add Snippet Note"
+        "title": "Snippet-Note"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "snippetnote.addNote",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "build": "node esbuild.js",
@@ -38,18 +47,15 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.8",
-    "@types/node": "20.x",
-    "@types/vscode": "^1.94.0",
-    "@typescript-eslint/eslint-plugin": "^8.7.0",
-    "@typescript-eslint/parser": "^8.7.0",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1",
     "esbuild": "^0.14.0",
-    "eslint": "^7.32.0",
-    "npm-run-all": "^4.1.5",
     "typescript": "^4.5.4",
     "vsce": "^1.100.0",
+    "npm-run-all": "^4.1.5",
+    "eslint": "^7.32.0",
     "vscode-test": "^1.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siyi424/SnippetNote"
   }
 }

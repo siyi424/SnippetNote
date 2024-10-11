@@ -44,7 +44,7 @@ You can author your README using Visual Studio Code. Here are some useful editor
 
 ## Contributing
 
-Contributions are welcome! Please visit the [GitHub repository](https://github.com/your-repo) for more information.
+Contributions are welcome! Please visit the [GitHub repository](https://github.com/siyi424/SnippetNote) for more information.
 
 ## License
 
