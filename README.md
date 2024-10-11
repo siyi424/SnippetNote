@@ -1,11 +1,11 @@
-# SnippetNote
+ SnippetNote
 
 SnippetNote is a VS Code extension designed to help you take notes and export them while learning project code.
 
 ## Features
 
 - Select code snippets and generate explanations using GitHub Copilot.
-- Export code snippets and explanations to a Markdown file.
+- Export code snippets and explanations to  Markdown file.
 - Add and remove notes in an existing Markdown file with automatic numbering.
 
 ## Installation
@@ -17,7 +17,7 @@ SnippetNote is a VS Code extension designed to help you take notes and export th
 
 ## Usage
 
-1. Open a project in Visual Studio Code.
+1. Open a project in Visual Studio Code
 2. Select a piece of code.
 3. Right-click the selected code snippet and choose `SnippetNote: Insert a new code snippet`.
 4. Enter a title for the code snippet in the input box.
@@ -51,3 +51,4 @@ Contributions are welcome! Please visit the [GitHub repository](https://github.c
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 **Enjoy!**
+
