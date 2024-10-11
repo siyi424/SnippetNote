@@ -1,0 +1,55 @@
+{
+  "name": "snippetnote",
+  "displayName": "SnippetNote",
+  "description": "SnippetNote is a VS Code extension designed to facilitate note-taking and exporting notes while learning project code. Users can select a code snippet, use the GitHub Copilot extension to generate explanations, and then export the code snippet along with the explanation to a Markdown document in the project's root directory. The extension also supports adding and removing entries in an existing Markdown file based on a numbering system.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:snippetNote.addNote"
+  ],
+  "main": "dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "snippetnote.addNote",
+        "title": "Add Snippet Note"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node esbuild.js",
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "vsix": "vsce package",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.94.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.14.0",
+    "eslint": "^7.32.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.5.4",
+    "vsce": "^1.100.0",
+    "vscode-test": "^1.5.2"
+  }
+}
