@@ -1,7 +1,7 @@
 {
   "name": "snippetnote",
   "displayName": "SnippetNote",
-  "description": "SnippetNote is a VS Code extension designed to facilitate note-taking and exporting notes while learning project code. Users can select a code snippet, use the GitHub Copilot extension to generate explanations, and then export the code snippet along with the explanation to a Markdown document in the project's root directory. The extension also supports adding and removing entries in an existing Markdown file based on a numbering system.",
+  "description": "SnippetNote is a VS Code extension designed to facilitate note-taking and exporting notes while learning project code.",
   "version": "0.0.1",
   "publisher": "siyi424",
   "engines": {
